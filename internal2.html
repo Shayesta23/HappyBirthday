@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday</title>
+    <style>
+        html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glow-on-hover {
+    width: 320px;
+    height: 70px;
+    border:none;
+    outline:none;
+    color: #39bce1;
+    background: #000;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    margin: 50px;
+    font-size:xx-large;
+    font-family: 'Pacifico', cursive;
+    
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8,#ff0000, rgb(134, 21, 214), rgb(247, 125, 247), rgb(96, 96, 233), rgb(102, 222, 102), rgb(240, 240, 73), rgb(237, 176, 63), rgb(241, 70, 70), rgb(244, 244, 53), #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #161616
+}
+
+.glow-on-hover:active:after {
+    background:transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: 'Hover, Click, Double tap and hold 30 secs';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    font-family: cursive ;
+    font-size:x-small;
+    
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+h1{
+    color:#39bce1;
+    font-family: cursive;
+    font-size:x-small;
+    padding:10px;
+    margin:50px 100px 50px 100px; 
+    text-align: center;
+}
+#n{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+img{
+    text-align: center;
+    height:170px;
+    width:180px;
+    margin: -40px 100px 0px 100px ; padding:1px;
+    border-width: 10px; background-color: #01090b;
+}
+#m{
+    margin:10px;
+    padding: 5px;
+    font-size:small;
+    font-family:cursive; 
+
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div><button class="glow-on-hover" type="button">Live Long, Rahman!</button>
+    <h1>Click Moon, for Home Page</h1>
+   <div id="n"><a href="./index.html"><img src="./moon0.jpg" alt="moon"></a></div>
+   <h1 id="m">Thank You! ♡<br>Hope you like it :)</h1>
+   
+</div>
+</body>
+</html>
